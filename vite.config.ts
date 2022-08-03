@@ -15,6 +15,13 @@ export default defineConfig({
         },
         extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json"],
     },
+    css: {
+        preprocessorOptions: {
+            scss: {
+                additionalData: `@use "src/assets/css/element.scss`,
+            }
+        }
+    },
     plugins: [
         vue(),
         ElementPlus(),
